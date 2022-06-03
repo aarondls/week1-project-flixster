@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='[https://github.com/aarondls/week1-project-flixster/blob/master/flixster_demo.gif](https://github.com/aarondls/week1-project-flixster/blob/master/flixster_demo.gif)' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/aarondls/week1-project-flixster/blob/master/flixster_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created directly from Android Studio.
 
