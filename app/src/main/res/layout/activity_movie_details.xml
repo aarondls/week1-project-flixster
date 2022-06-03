@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPoster"
+        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Fantastic Beasts: The Secrets of Dumbledore" />
 
     <RatingBar
@@ -25,7 +25,7 @@
         android:stepSize="0.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPoster"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <TextView
@@ -34,15 +34,24 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbVoteAverage" />
+        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintTop_toBottomOf="@+id/tvReleaseDate" />
 
     <ImageView
         android:id="@+id/ivPoster"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="156dp"
+        android:layout_height="151dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvReleaseDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintTop_toBottomOf="@+id/rbVoteAverage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

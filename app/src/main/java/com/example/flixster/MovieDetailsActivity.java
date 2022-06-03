@@ -23,8 +23,9 @@ public class MovieDetailsActivity extends AppCompatActivity {
     // the view objects
     TextView tvTitle;
     TextView tvOverview;
+    TextView tvReleaseDate;
     RatingBar rbVoteAverage;
-    ImageView ivPoster; // added
+    ImageView ivPoster;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +34,9 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         tvTitle = (TextView) findViewById(R.id.tvTitle);
         tvOverview = (TextView) findViewById(R.id.tvOverview);
+        tvReleaseDate = (TextView) findViewById(R.id.tvReleaseDate);
         rbVoteAverage = (RatingBar) findViewById(R.id.rbVoteAverage);
-        ivPoster = (ImageView) findViewById(R.id.ivPoster); // added
-
+        ivPoster = (ImageView) findViewById(R.id.ivPoster);
 
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
         Log.d("MovieDetailsActivity", String.format("Showing details for '%s'", movie.getTitle()));
@@ -43,9 +44,10 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // set the title and overview
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
+        tvReleaseDate.setText(movie.getReleaseDate());
         String imageUrl; // added
         imageUrl = movie.getPosterPath(); // added
-        Glide.with(this).load(imageUrl).placeholder(R.drawable.flicks_backdrop_placeholder).into(ivPoster); // added
+        Glide.with(this).load(imageUrl).placeholder(R.drawable.flicks_backdrop_placeholder).into(ivPoster);
 
         // vote average is 0..10, convert to 0..5 by dividing by 2
         float voteAverage = movie.getVoteAverage().floatValue();
