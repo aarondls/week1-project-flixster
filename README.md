@@ -45,7 +45,7 @@ For the first week, the app was pretty straightforward, so not really any challe
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2022] [Aaron de los Santos]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
